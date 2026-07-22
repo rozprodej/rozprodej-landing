@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rozprodej.cz — rozprodeje skladů a přebytků elektromateriálu</title>
+<meta name="description" content="Připravujeme tržiště přebytků elektroinstalačního materiálu. Přebytky ze zakázek, ležáky a vratky velkoobchodů — nové zboží o 30–50 % levněji. Ověření prodejci, bezpečná platba.">
+<style>
+  :root{--navy:#132743;--brand:#e8590c;--muted:#6b7280;--border:#e5e7eb}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:#1a2433;background:#fff}
+  .hero{background:linear-gradient(120deg,var(--navy),#1d3a5f);color:#fff;padding:60px 20px 70px;text-align:center}
+  .logo{font-weight:900;font-size:30px;letter-spacing:-.5px;margin-bottom:34px}
+  .logo .pct{display:inline-block;background:var(--brand);border-radius:10px;padding:2px 10px;margin-right:8px}
+  .logo .tld{color:#94a3b8;font-weight:600}
+  .hero h1{font-size:clamp(26px,4.5vw,42px);line-height:1.2;max-width:760px;margin:0 auto 16px}
+  .hero p{color:#c8d4e3;font-size:17px;max-width:640px;margin:0 auto 8px;line-height:1.6}
+  .badge{display:inline-block;background:#fbbf24;color:#132743;font-weight:800;font-size:12px;padding:4px 12px;border-radius:99px;text-transform:uppercase;letter-spacing:.6px;margin-bottom:18px}
+  .wrap{max-width:960px;margin:0 auto;padding:0 20px}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin:-34px auto 50px;max-width:960px;padding:0 20px}
+  .card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:22px;box-shadow:0 10px 30px rgba(19,39,67,.08)}
+  .card .ico{font-size:26px;margin-bottom:10px}
+  .card b{display:block;margin-bottom:6px;font-size:16px}
+  .card p{color:var(--muted);font-size:14px;line-height:1.55}
+  .split{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin:0 0 50px}
+  .aud{border:1.5px solid var(--border);border-radius:16px;padding:24px}
+  .aud h2{font-size:19px;margin-bottom:8px}
+  .aud p{color:var(--muted);font-size:14.5px;line-height:1.6;margin-bottom:12px}
+  .aud ul{margin:0 0 4px 18px;color:#374151;font-size:14.5px;line-height:1.8}
+  form{background:#f6f7f9;border-radius:16px;padding:28px;text-align:center;margin-bottom:50px}
+  form h2{font-size:21px;margin-bottom:6px}
+  form p{color:var(--muted);font-size:14.5px;margin-bottom:16px}
+  .row{display:flex;gap:8px;max-width:480px;margin:0 auto;flex-wrap:wrap}
+  input[type=email]{flex:1;min-width:220px;border:1.5px solid var(--border);border-radius:10px;padding:12px 14px;font-size:15px}
+  button{border:none;background:var(--brand);color:#fff;font-weight:800;font-size:15px;border-radius:10px;padding:12px 22px;cursor:pointer}
+  button:hover{background:#cf4c07}
+  .ok{display:none;color:#15803d;font-weight:700;margin-top:12px}
+  footer{border-top:1px solid var(--border);padding:20px;text-align:center;color:var(--muted);font-size:13px;line-height:1.7}
+  footer a{color:var(--navy)}
+</style>
+</head>
+<body>
+<div class="hero">
+  <div class="logo"><span class="pct">%</span>Rozprodej<span class="tld">.cz</span></div>
+  <div class="badge">Připravujeme · start 2026</div>
+  <h1>Rozprodeje skladů a přebytků elektromateriálu</h1>
+  <p>Nový nepoužitý materiál od ověřených firem — přebytky ze zakázek, ležáky a vratky velkoobchodů. O 30–50 % levněji, skladem hned.</p>
+</div>
+
+<div class="cards">
+  <div class="card"><div class="ico">🏷️</div><b>Katalog přes EAN</b><p>Vyfotíte štítek, my doplníme parametry i běžnou cenu. Inzerát za 30 sekund, žádné vypisování.</p></div>
+  <div class="card"><div class="ico">🏢</div><b>Jen ověřené firmy</b><p>Každý prodejce prochází ověřením IČO. Elektrikáři, montážní firmy a velkoobchody — žádní anonymové.</p></div>
+  <div class="card"><div class="ico">🔒</div><b>Bezpečná platba</b><p>Peníze se prodejci uvolní až po převzetí zboží. Žádné „pošlete předem na účet".</p></div>
+</div>
+
+<div class="wrap">
+  <div class="split">
+    <div class="aud">
+      <h2>⚡ Máte přebytky nebo ležáky?</h2>
+      <p>Elektrikářům i velkoobchodům uděláme z mrtvých zásob peníze:</p>
+      <ul>
+        <li>zbytky kabelů a materiálu ze zakázek</li>
+        <li>ležáky skladu a ukončené řady</li>
+        <li>vratky a zboží s poškozeným obalem</li>
+      </ul>
+    </div>
+    <div class="aud">
+      <h2>🛒 Chcete nakupovat výhodně?</h2>
+      <p>Stejné zboží jako ve velkoobchodě, jen levněji:</p>
+      <ul>
+        <li>slevy 30–50 % proti běžné ceně</li>
+        <li>skladem hned — u prodejce ve vašem okolí</li>
+        <li>parametry a EAN u každé položky</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Formulář: založ zdarma účet na https://web3forms.com, vlož svůj access_key níže.
+       Než ho vložíš, formulář jen zobrazí poděkování (demo režim). -->
+  <form id="f" action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="SEM-VLOZ-SVUJ-WEB3FORMS-KLIC">
+    <input type="hidden" name="subject" value="Nový zájemce z rozprodej.cz">
+    <h2>Buďte u startu</h2>
+    <p>Nechte nám e-mail — ozveme se, až otevřeme první rozprodeje. Velkoobchodům nabízíme pilotní podmínky bez paušálu.</p>
+    <div class="row">
+      <input type="email" name="email" placeholder="vas@email.cz" required>
+      <button type="submit">Chci vědět o startu</button>
+    </div>
+    <div class="ok" id="ok">✅ Díky! Ozveme se, jakmile otevřeme.</div>
+  </form>
+</div>
+
+<footer>
+  <b>Rozprodej.cz</b> — tržiště přebytků elektroinstalačního materiálu · připravujeme<br>
+  Kontakt: <a href="mailto:info@rozprodej.cz">info@rozprodej.cz</a>
+</footer>
+
+<script>
+  // Demo režim: dokud není vložen Web3Forms klíč, formulář neodesílá a jen poděkuje.
+  document.getElementById('f').addEventListener('submit',function(e){
+    var key=this.querySelector('[name=access_key]').value;
+    if(key.indexOf('SEM-VLOZ')===0){e.preventDefault();document.getElementById('ok').style.display='block';this.querySelector('[type=email]').value='';}
+  });
+</script>
+</body>
+</html>
