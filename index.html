@@ -75,11 +75,8 @@
     </div>
   </div>
 
-  <!-- Formulář: založ zdarma účet na https://web3forms.com, vlož svůj access_key níže.
-       Než ho vložíš, formulář jen zobrazí poděkování (demo režim). -->
-  <form id="f" action="https://api.web3forms.com/submit" method="POST">
-    <input type="hidden" name="access_key" value="de7d258f-ccb8-4881-9c25-091f224c6caf">
-    <input type="hidden" name="subject" value="Nový zájemce z rozprodej.cz">
+  <!-- Formulář odesílá na vlastní endpoint /api/zajemce (Vercel funkce → Supabase). -->
+  <form id="f">
     <h2>Buďte u startu</h2>
     <p>Nechte nám e-mail — ozveme se, až otevřeme první rozprodeje. Velkoobchodům nabízíme pilotní podmínky bez paušálu.</p>
     <div class="row">
@@ -87,6 +84,7 @@
       <button type="submit">Chci vědět o startu</button>
     </div>
     <div class="ok" id="ok">✅ Díky! Ozveme se, jakmile otevřeme.</div>
+    <div class="ok" id="err" style="color:#b91c1c">Odeslání se nepovedlo — zkuste to prosím znovu, nebo napište na info@rozprodej.cz.</div>
   </form>
 </div>
 
@@ -96,10 +94,19 @@
 </footer>
 
 <script>
-  // Demo režim: dokud není vložen Web3Forms klíč, formulář neodesílá a jen poděkuje.
-  document.getElementById('f').addEventListener('submit',function(e){
-    var key=this.querySelector('[name=access_key]').value;
-    if(key.indexOf('SEM-VLOZ')===0){e.preventDefault();document.getElementById('ok').style.display='block';this.querySelector('[type=email]').value='';}
+  document.getElementById('f').addEventListener('submit', async function(e){
+    e.preventDefault();
+    var input=this.querySelector('[type=email]');
+    var btn=this.querySelector('button');
+    var ok=document.getElementById('ok'), err=document.getElementById('err');
+    ok.style.display='none'; err.style.display='none';
+    btn.disabled=true; btn.textContent='Odesílám…';
+    try{
+      var r=await fetch('/api/zajemce',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:input.value})});
+      if(r.ok){ok.style.display='block';input.value='';}
+      else{err.style.display='block';}
+    }catch(_){err.style.display='block';}
+    btn.disabled=false; btn.textContent='Chci vědět o startu';
   });
 </script>
 </body>
